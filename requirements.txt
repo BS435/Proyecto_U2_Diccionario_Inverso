@@ -1,0 +1,20 @@
+# Versiones probadas con Python 3.12 (local) y Google Colab.
+# node2vec 0.5.0 exige numpy<2 y gensim<5; sin estas versiones falla con «No module named 'numpy.char'».
+numpy<2
+scipy<1.14
+pandas>=2.2
+networkx>=3.3
+matplotlib>=3.8
+jinja2
+tqdm
+xlrd==2.0.2            # lectura de NAP.xls
+nltk>=3.8              # stopwords en español
+spacy>=3.7             # lematización
+es_core_news_sm @ https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl
+gensim==4.3.3
+node2vec==0.5.0
+gradio>=5.0            # demostración interactiva (sección 11)
+ipykernel
+ipywidgets            # barras de progreso de tqdm en el cuaderno
+jupyter
+nbformat

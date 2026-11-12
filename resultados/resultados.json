@@ -1,0 +1,1733 @@
+{
+  "normas": {
+    "pares_crudos": 13336,
+    "pares_validos": 13299,
+    "pares_consolidados": 13171,
+    "descartes": {
+      "respuesta inválida (*, lema '=')": 4,
+      "número o marca de tiempo": 30,
+      "autoasociación (estímulo = respuesta)": 3,
+      "estímulo sin lema (se usa la forma original)": 1
+    }
+  },
+  "grafo": {
+    "nodos": 4222,
+    "aristas": 12834,
+    "grado_medio": 6.079583135954524,
+    "grado_mediano": 1.0,
+    "grado_maximo": 152,
+    "densidad": 0.0014403182032585937,
+    "componentes_conexas": 1,
+    "tamano_componente_mayor": 4222,
+    "tamanos_componentes": [
+      4222
+    ],
+    "coef_agrupamiento_medio": 0.11698088682184596,
+    "transitividad": 0.05767780779276872,
+    "nodos_grado_1": 2310,
+    "hubs": [
+      {
+        "nodo": "niño",
+        "grado": 152,
+        "es_estimulo": "sí"
+      },
+      {
+        "nodo": "agua",
+        "grado": 114,
+        "es_estimulo": "sí"
+      },
+      {
+        "nodo": "oso",
+        "grado": 113,
+        "es_estimulo": "sí"
+      },
+      {
+        "nodo": "dulce",
+        "grado": 107,
+        "es_estimulo": "sí"
+      },
+      {
+        "nodo": "color",
+        "grado": 107,
+        "es_estimulo": "sí"
+      },
+      {
+        "nodo": "computador",
+        "grado": 105,
+        "es_estimulo": "sí"
+      },
+      {
+        "nodo": "casa",
+        "grado": 104,
+        "es_estimulo": "sí"
+      },
+      {
+        "nodo": "grande",
+        "grado": 102,
+        "es_estimulo": "no"
+      },
+      {
+        "nodo": "calle",
+        "grado": 99,
+        "es_estimulo": "sí"
+      },
+      {
+        "nodo": "camión",
+        "grado": 98,
+        "es_estimulo": "sí"
+      }
+    ]
+  },
+  "evaluacion": {
+    "archivo": "evaluacion_PRUEBA_sintetico.csv",
+    "datos_de_prueba": true,
+    "recibidas": 165,
+    "duplicadas": 0,
+    "sin_nodo": 0,
+    "con_objetivo": 0,
+    "validas": 165,
+    "conceptos": 55,
+    "desarrollo": 66,
+    "prueba": 99,
+    "fuentes": {
+      "sintetico_prueba": 165
+    }
+  },
+  "cobertura_prepro": {
+    "con_algun_lema": 0.9878787878787879,
+    "lemas_utiles_media": 4.066666666666666,
+    "lemas_media": 5.527272727272727,
+    "tokens_oov": 0.2730263157894737,
+    "sin_ningun_lema": 2
+  },
+  "lematizacion": [
+    {
+      "Lematización": "palabra por palabra (clase)",
+      "Con ≥ 1 lema útil": 0.9878787878787879,
+      "Lemas útiles por descripción": 4.066666666666666,
+      "Lemas fuera del grafo": 0.2730263157894737
+    },
+    {
+      "Lematización": "oración completa (spaCy)",
+      "Con ≥ 1 lema útil": 0.9939393939393939,
+      "Lemas útiles por descripción": 4.315151515151515,
+      "Lemas fuera del grafo": 0.22356828193832598
+    }
+  ],
+  "katz_convergencia": {
+    "clase": 50,
+    "ajustado": 163,
+    "total": 165
+  },
+  "node2vec": {
+    "esquema_elegido": "s_frecuencia",
+    "mejor": [
+      "n2v|B_128|suma_normalizada",
+      "s_frecuencia"
+    ],
+    "configuraciones": {
+      "A_clase": {
+        "dimensiones": 300,
+        "longitud": 80,
+        "caminatas": 10,
+        "p": 1.0,
+        "q": 1.0,
+        "ventana": 10
+      },
+      "B_128": {
+        "dimensiones": 128,
+        "longitud": 30,
+        "caminatas": 40,
+        "p": 1.0,
+        "q": 1.0,
+        "ventana": 10
+      },
+      "C_local": {
+        "dimensiones": 128,
+        "longitud": 30,
+        "caminatas": 40,
+        "p": 0.5,
+        "q": 2.0,
+        "ventana": 10
+      },
+      "D_profunda": {
+        "dimensiones": 128,
+        "longitud": 30,
+        "caminatas": 40,
+        "p": 2.0,
+        "q": 0.5,
+        "ventana": 10
+      }
+    },
+    "desarrollo_esquemas": [
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec B_128 · suma",
+        "Grafo": "completo",
+        "Ponderación": "1/f (peso de clase, es distancia)",
+        "p1": 0.12121212121212122,
+        "p3": 0.24242424242424243,
+        "p5": 0.2878787878787879,
+        "mrr": 0.20015737296479652,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 230.2383648
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec B_128 · suma",
+        "Grafo": "completo",
+        "Ponderación": "frecuencia (similitud)",
+        "p1": 0.30303030303030304,
+        "p3": 0.3939393939393939,
+        "p5": 0.5454545454545454,
+        "mrr": 0.3969570185274961,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 220.5389482999999
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec B_128 · suma",
+        "Grafo": "completo",
+        "Ponderación": "asociación (similitud)",
+        "p1": 0.30303030303030304,
+        "p3": 0.42424242424242425,
+        "p5": 0.5,
+        "mrr": 0.39212897997286494,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 220.7800140000004
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec B_128 · suma",
+        "Grafo": "completo",
+        "Ponderación": "1/tiempo (similitud)",
+        "p1": 0.21212121212121213,
+        "p3": 0.36363636363636365,
+        "p5": 0.4393939393939394,
+        "mrr": 0.32315097638758605,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 223.46881459999986
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec B_128 · suma",
+        "Grafo": "completo",
+        "Ponderación": "sin pesos",
+        "p1": 0.25757575757575757,
+        "p3": 0.42424242424242425,
+        "p5": 0.5,
+        "mrr": 0.37429664563628057,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 231.94200969999974
+      }
+    ],
+    "desarrollo_configuraciones": [
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec A_clase · suma",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.06060606060606061,
+        "p3": 0.19696969696969696,
+        "p5": 0.24242424242424243,
+        "mrr": 0.1585874028182209,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 170.7592722999998
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec A_clase · suma normalizada",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.06060606060606061,
+        "p3": 0.18181818181818182,
+        "p5": 0.24242424242424243,
+        "mrr": 0.16097111901880165,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 170.76240199999984
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec A_clase · suma idf",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.10606060606060606,
+        "p3": 0.19696969696969696,
+        "p5": 0.24242424242424243,
+        "mrr": 0.18492846503211077,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 170.75905550000016
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec B_128 · suma",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.30303030303030304,
+        "p3": 0.3939393939393939,
+        "p5": 0.5454545454545454,
+        "mrr": 0.3969570185274961,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 220.5389482999999
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec B_128 · suma normalizada",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.3181818181818182,
+        "p3": 0.4090909090909091,
+        "p5": 0.5909090909090909,
+        "mrr": 0.41297935891312,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 220.5436620999999
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec B_128 · suma idf",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.2878787878787879,
+        "p3": 0.42424242424242425,
+        "p5": 0.4696969696969697,
+        "mrr": 0.39064710504168054,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 220.5406893999998
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec C_local · suma",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.25757575757575757,
+        "p3": 0.3484848484848485,
+        "p5": 0.5,
+        "mrr": 0.35593228786001685,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 156.62613120000015
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec C_local · suma normalizada",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.2727272727272727,
+        "p3": 0.3787878787878788,
+        "p5": 0.5151515151515151,
+        "mrr": 0.36393545202276667,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 156.6295313000005
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec C_local · suma idf",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.22727272727272727,
+        "p3": 0.36363636363636365,
+        "p5": 0.5,
+        "mrr": 0.33686107657431674,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 156.62747949999994
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec D_profunda · suma",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.25757575757575757,
+        "p3": 0.3787878787878788,
+        "p5": 0.42424242424242425,
+        "mrr": 0.3593745435124388,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 162.2321864999999
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec D_profunda · suma normalizada",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.24242424242424243,
+        "p3": 0.3939393939393939,
+        "p5": 0.45454545454545453,
+        "mrr": 0.3491876452078804,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 162.23478419999992
+      },
+      {
+        "Familia": "node2vec",
+        "Modelo": "node2vec D_profunda · suma idf",
+        "Grafo": "completo",
+        "Ponderación": "s_frecuencia",
+        "p1": 0.2727272727272727,
+        "p3": 0.3787878787878788,
+        "p5": 0.4393939393939394,
+        "mrr": 0.36099423102394607,
+        "cobertura": 0.9848484848484849,
+        "n": 66,
+        "Tiempo (s)": 162.2327851
+      }
+    ]
+  },
+  "pagerank": {
+    "variante": "no_dirigido",
+    "peso": "frecuencia",
+    "alfa": 0.7,
+    "sensibilidad_alfa": [
+      {
+        "α": 0.5,
+        "p1": 0.5151515151515151,
+        "p3": 0.696969696969697,
+        "p5": 0.7727272727272727,
+        "mrr": 0.6270569028606785,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "α": 0.7,
+        "p1": 0.5151515151515151,
+        "p3": 0.696969696969697,
+        "p5": 0.7727272727272727,
+        "mrr": 0.6297389510557373,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "α": 0.85,
+        "p1": 0.5,
+        "p3": 0.6666666666666666,
+        "p5": 0.7424242424242424,
+        "mrr": 0.6130084795830104,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "α": 0.95,
+        "p1": 0.4393939393939394,
+        "p3": 0.6515151515151515,
+        "p5": 0.6818181818181818,
+        "mrr": 0.5525492244227111,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      }
+    ]
+  },
+  "rrf": {
+    "combinacion": "centralidad + PageRank",
+    "k": 60,
+    "componentes": {
+      "centralidad": [
+        "cercania_subconjunto",
+        "asociacion"
+      ],
+      "node2vec": [
+        "n2v|B_128|suma_normalizada",
+        "s_frecuencia"
+      ],
+      "pagerank": [
+        "ppr_no_dirigido_a0.7",
+        "frecuencia"
+      ]
+    },
+    "desarrollo": [
+      {
+        "Combinación": "centralidad + node2vec",
+        "k": 10,
+        "p1": 0.5909090909090909,
+        "p3": 0.7424242424242424,
+        "p5": 0.7575757575757576,
+        "mrr": 0.6677007360111539,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + node2vec",
+        "k": 30,
+        "p1": 0.5909090909090909,
+        "p3": 0.7272727272727273,
+        "p5": 0.7878787878787878,
+        "mrr": 0.6692305495441495,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + node2vec",
+        "k": 60,
+        "p1": 0.5909090909090909,
+        "p3": 0.7272727272727273,
+        "p5": 0.7878787878787878,
+        "mrr": 0.6690046106568818,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + node2vec",
+        "k": 100,
+        "p1": 0.5909090909090909,
+        "p3": 0.7272727272727273,
+        "p5": 0.7878787878787878,
+        "mrr": 0.6713961733425621,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + PageRank",
+        "k": 10,
+        "p1": 0.6060606060606061,
+        "p3": 0.7575757575757576,
+        "p5": 0.7878787878787878,
+        "mrr": 0.6977679769637998,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + PageRank",
+        "k": 30,
+        "p1": 0.6060606060606061,
+        "p3": 0.7575757575757576,
+        "p5": 0.7878787878787878,
+        "mrr": 0.6985592529375951,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + PageRank",
+        "k": 60,
+        "p1": 0.6060606060606061,
+        "p3": 0.7575757575757576,
+        "p5": 0.7878787878787878,
+        "mrr": 0.6985925648425649,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + PageRank",
+        "k": 100,
+        "p1": 0.6060606060606061,
+        "p3": 0.7575757575757576,
+        "p5": 0.7878787878787878,
+        "mrr": 0.6983292170792171,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "node2vec + PageRank",
+        "k": 10,
+        "p1": 0.5909090909090909,
+        "p3": 0.7121212121212122,
+        "p5": 0.7727272727272727,
+        "mrr": 0.6645043556472955,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "node2vec + PageRank",
+        "k": 30,
+        "p1": 0.5909090909090909,
+        "p3": 0.696969696969697,
+        "p5": 0.7575757575757576,
+        "mrr": 0.6608099714039671,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "node2vec + PageRank",
+        "k": 60,
+        "p1": 0.5909090909090909,
+        "p3": 0.696969696969697,
+        "p5": 0.7575757575757576,
+        "mrr": 0.6606231584117896,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "node2vec + PageRank",
+        "k": 100,
+        "p1": 0.5909090909090909,
+        "p3": 0.696969696969697,
+        "p5": 0.7575757575757576,
+        "mrr": 0.6606231584117896,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + node2vec + PageRank",
+        "k": 10,
+        "p1": 0.6060606060606061,
+        "p3": 0.7575757575757576,
+        "p5": 0.7878787878787878,
+        "mrr": 0.6937244804029611,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + node2vec + PageRank",
+        "k": 30,
+        "p1": 0.6060606060606061,
+        "p3": 0.7575757575757576,
+        "p5": 0.803030303030303,
+        "mrr": 0.6941926162991863,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + node2vec + PageRank",
+        "k": 60,
+        "p1": 0.6060606060606061,
+        "p3": 0.7575757575757576,
+        "p5": 0.803030303030303,
+        "mrr": 0.6941115023702207,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      },
+      {
+        "Combinación": "centralidad + node2vec + PageRank",
+        "k": 100,
+        "p1": 0.6060606060606061,
+        "p3": 0.7575757575757576,
+        "p5": 0.803030303030303,
+        "mrr": 0.6940062257691721,
+        "cobertura": 0.9848484848484849,
+        "n": 66
+      }
+    ]
+  },
+  "tabla_unica": [
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Cercanía al subconjunto (propia)",
+      "Grafo": "completo",
+      "Ponderación": "Asociación",
+      "p1": 0.5151515151515151,
+      "p3": 0.7575757575757576,
+      "p5": 0.7777777777777778,
+      "mrr": 0.6481934581369332,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 8.192822200000137,
+      "p5_dev": 0.7575757575757576,
+      "mrr_dev": 0.6602246931636019,
+      "p5_ic": "[0.70, 0.85]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Intermediación por subconjunto",
+      "Grafo": "completo",
+      "Ponderación": "Asociación",
+      "p1": 0.494949494949495,
+      "p3": 0.6363636363636364,
+      "p5": 0.7171717171717171,
+      "mrr": 0.5858706108706109,
+      "cobertura": 0.9595959595959596,
+      "n": 99,
+      "Tiempo (s)": 15.648422200000141,
+      "p5_dev": 0.7121212121212122,
+      "mrr_dev": 0.6099927849927851,
+      "p5_ic": "[0.63, 0.80]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Intermediación por subconjunto",
+      "Grafo": "completo",
+      "Ponderación": "Tiempo",
+      "p1": 0.3838383838383838,
+      "p3": 0.5555555555555556,
+      "p5": 0.5959595959595959,
+      "mrr": 0.47701619368286036,
+      "cobertura": 0.9696969696969697,
+      "n": 99,
+      "Tiempo (s)": 18.117822799999885,
+      "p5_dev": 0.42424242424242425,
+      "mrr_dev": 0.39107744107744113,
+      "p5_ic": "[0.49, 0.69]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Intermediación por subconjunto",
+      "Grafo": "completo",
+      "Ponderación": "Frecuencia",
+      "p1": 0.32323232323232326,
+      "p3": 0.5050505050505051,
+      "p5": 0.6363636363636364,
+      "mrr": 0.4425188237688238,
+      "cobertura": 0.9696969696969697,
+      "n": 99,
+      "Tiempo (s)": 28.729615200000126,
+      "p5_dev": 0.6060606060606061,
+      "mrr_dev": 0.5114299421117602,
+      "p5_ic": "[0.54, 0.73]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Cercanía al subconjunto (propia)",
+      "Grafo": "completo",
+      "Ponderación": "Tiempo",
+      "p1": 0.37373737373737376,
+      "p3": 0.41414141414141414,
+      "p5": 0.5050505050505051,
+      "mrr": 0.43581283478931854,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 8.561051500000076,
+      "p5_dev": 0.5,
+      "mrr_dev": 0.3931478910162089,
+      "p5_ic": "[0.40, 0.61]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Cercanía al subconjunto (propia)",
+      "Grafo": "completo",
+      "Ponderación": "Frecuencia",
+      "p1": 0.23232323232323232,
+      "p3": 0.42424242424242425,
+      "p5": 0.5353535353535354,
+      "mrr": 0.35935624526017157,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 8.830617699999948,
+      "p5_dev": 0.6515151515151515,
+      "mrr_dev": 0.46573930942353414,
+      "p5_ic": "[0.43, 0.64]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Intermediación",
+      "Grafo": "reducido",
+      "Ponderación": "Asociación",
+      "p1": 0.13131313131313133,
+      "p3": 0.3838383838383838,
+      "p5": 0.47474747474747475,
+      "mrr": 0.2986739045572171,
+      "cobertura": 0.9595959595959596,
+      "n": 99,
+      "Tiempo (s)": 29.83608580000009,
+      "p5_dev": 0.6515151515151515,
+      "mrr_dev": 0.3553923404700917,
+      "p5_ic": "[0.38, 0.58]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Cercanía",
+      "Grafo": "reducido",
+      "Ponderación": "Asociación",
+      "p1": 0.15151515151515152,
+      "p3": 0.3434343434343434,
+      "p5": 0.47474747474747475,
+      "mrr": 0.29853250479377963,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 26.437056600000005,
+      "p5_dev": 0.5151515151515151,
+      "mrr_dev": 0.3602743621213928,
+      "p5_ic": "[0.37, 0.57]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Cercanía",
+      "Grafo": "reducido",
+      "Ponderación": "Frecuencia",
+      "p1": 0.13131313131313133,
+      "p3": 0.21212121212121213,
+      "p5": 0.3434343434343434,
+      "mrr": 0.24213495446836242,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 27.847824400000036,
+      "p5_dev": 0.3787878787878788,
+      "mrr_dev": 0.3210832528109631,
+      "p5_ic": "[0.25, 0.43]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Intermediación",
+      "Grafo": "reducido",
+      "Ponderación": "Frecuencia",
+      "p1": 0.09090909090909091,
+      "p3": 0.23232323232323232,
+      "p5": 0.35353535353535354,
+      "mrr": 0.21683010656585222,
+      "cobertura": 0.9494949494949495,
+      "n": 99,
+      "Tiempo (s)": 30.858065399999987,
+      "p5_dev": 0.45454545454545453,
+      "mrr_dev": 0.3298052535071856,
+      "p5_ic": "[0.26, 0.44]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Grado",
+      "Grafo": "reducido",
+      "Ponderación": "—",
+      "p1": 0.09090909090909091,
+      "p3": 0.20202020202020202,
+      "p5": 0.2828282828282828,
+      "mrr": 0.20934464016381954,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 0.16198899999972127,
+      "p5_dev": 0.42424242424242425,
+      "mrr_dev": 0.26572144746816834,
+      "p5_ic": "[0.19, 0.37]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Vector propio",
+      "Grafo": "reducido",
+      "Ponderación": "Frecuencia",
+      "p1": 0.1111111111111111,
+      "p3": 0.1717171717171717,
+      "p5": 0.25252525252525254,
+      "mrr": 0.19552142896870608,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 53.2170701,
+      "p5_dev": 0.4090909090909091,
+      "mrr_dev": 0.2666708225163191,
+      "p5_ic": "[0.17, 0.34]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Vector propio",
+      "Grafo": "reducido",
+      "Ponderación": "Asociación",
+      "p1": 0.1111111111111111,
+      "p3": 0.1717171717171717,
+      "p5": 0.23232323232323232,
+      "mrr": 0.19232743556941795,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 39.94427709999991,
+      "p5_dev": 0.36363636363636365,
+      "mrr_dev": 0.2569219613555517,
+      "p5_ic": "[0.15, 0.31]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Intermediación",
+      "Grafo": "reducido",
+      "Ponderación": "Tiempo",
+      "p1": 0.06060606060606061,
+      "p3": 0.1919191919191919,
+      "p5": 0.35353535353535354,
+      "mrr": 0.18890174040415497,
+      "cobertura": 0.9494949494949495,
+      "n": 99,
+      "Tiempo (s)": 29.996146400000043,
+      "p5_dev": 0.3939393939393939,
+      "mrr_dev": 0.216797978262191,
+      "p5_ic": "[0.26, 0.44]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Katz (ajustado, α = 0.9/λmax)",
+      "Grafo": "reducido",
+      "Ponderación": "—",
+      "p1": 0.06060606060606061,
+      "p3": 0.16161616161616163,
+      "p5": 0.25252525252525254,
+      "mrr": 0.17516478123377582,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 38.025456100000156,
+      "p5_dev": 0.36363636363636365,
+      "mrr_dev": 0.22201552033730487,
+      "p5_ic": "[0.17, 0.33]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Vector propio",
+      "Grafo": "reducido",
+      "Ponderación": "Tiempo",
+      "p1": 0.06060606060606061,
+      "p3": 0.1414141414141414,
+      "p5": 0.1919191919191919,
+      "mrr": 0.15133289689426152,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 27.12396949999993,
+      "p5_dev": 0.22727272727272727,
+      "mrr_dev": 0.15559368477059984,
+      "p5_ic": "[0.12, 0.27]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Cercanía",
+      "Grafo": "reducido",
+      "Ponderación": "Tiempo",
+      "p1": 0.050505050505050504,
+      "p3": 0.1414141414141414,
+      "p5": 0.18181818181818182,
+      "mrr": 0.14992920671302062,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 26.84214060000022,
+      "p5_dev": 0.36363636363636365,
+      "mrr_dev": 0.180338160527711,
+      "p5_ic": "[0.10, 0.25]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Comunicabilidad",
+      "Grafo": "reducido",
+      "Ponderación": "—",
+      "p1": 0.04040404040404041,
+      "p3": 0.15151515151515152,
+      "p5": 0.23232323232323232,
+      "mrr": 0.14431130697665864,
+      "cobertura": 0.7676767676767676,
+      "n": 99,
+      "Tiempo (s)": 188.45803079999996,
+      "p5_dev": 0.36363636363636365,
+      "mrr_dev": 0.24583461933243778,
+      "p5_ic": "[0.15, 0.31]"
+    },
+    {
+      "Familia": "Centralidad",
+      "Modelo": "Katz (clase, α = 0.1)",
+      "Grafo": "reducido",
+      "Ponderación": "—",
+      "p1": 0.04040404040404041,
+      "p3": 0.1414141414141414,
+      "p5": 0.15151515151515152,
+      "mrr": 0.09767393100726433,
+      "cobertura": 0.30303030303030304,
+      "n": 99,
+      "Tiempo (s)": 255.74802940000018,
+      "p5_dev": 0.18181818181818182,
+      "mrr_dev": 0.12303992303992303,
+      "p5_ic": "[0.08, 0.22]"
+    },
+    {
+      "Familia": "node2vec",
+      "Modelo": "node2vec B_128 · suma normalizada",
+      "Grafo": "completo",
+      "Ponderación": "s_frecuencia",
+      "p1": 0.20202020202020202,
+      "p3": 0.36363636363636365,
+      "p5": 0.47474747474747475,
+      "mrr": 0.32836869271064945,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 220.5436620999999,
+      "p5_dev": 0.5909090909090909,
+      "mrr_dev": 0.41297935891312,
+      "p5_ic": "[0.37, 0.58]"
+    },
+    {
+      "Familia": "node2vec",
+      "Modelo": "node2vec A_clase · suma",
+      "Grafo": "completo",
+      "Ponderación": "d_frecuencia",
+      "p1": 0.08080808080808081,
+      "p3": 0.1717171717171717,
+      "p5": 0.21212121212121213,
+      "mrr": 0.15545204472488225,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 169.8798767999997,
+      "p5_dev": 0.2727272727272727,
+      "mrr_dev": 0.1702999353458631,
+      "p5_ic": "[0.14, 0.29]"
+    },
+    {
+      "Familia": "node2vec",
+      "Modelo": "node2vec A_clase · suma",
+      "Grafo": "completo",
+      "Ponderación": "s_frecuencia",
+      "p1": 0.04040404040404041,
+      "p3": 0.13131313131313133,
+      "p5": 0.2222222222222222,
+      "mrr": 0.13037543040203523,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 170.7592722999998,
+      "p5_dev": 0.24242424242424243,
+      "mrr_dev": 0.1585874028182209,
+      "p5_ic": "[0.14, 0.30]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · no dirigido (α=0.7)",
+      "Grafo": "completo",
+      "Ponderación": "Frecuencia",
+      "p1": 0.48484848484848486,
+      "p3": 0.696969696969697,
+      "p5": 0.7575757575757576,
+      "mrr": 0.6063216027736474,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 4.50858640000024,
+      "p5_dev": 0.7727272727272727,
+      "mrr_dev": 0.6297389510557373,
+      "p5_ic": "[0.67, 0.84]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · no dirigido",
+      "Grafo": "completo",
+      "Ponderación": "Frecuencia",
+      "p1": 0.46464646464646464,
+      "p3": 0.6868686868686869,
+      "p5": 0.7575757575757576,
+      "mrr": 0.5912770262340273,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 4.120112999999947,
+      "p5_dev": 0.7424242424242424,
+      "mrr_dev": 0.6130084795830104,
+      "p5_ic": "[0.67, 0.84]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · no dirigido",
+      "Grafo": "completo",
+      "Ponderación": "Asociación",
+      "p1": 0.46464646464646464,
+      "p3": 0.6868686868686869,
+      "p5": 0.7575757575757576,
+      "mrr": 0.5903995829720468,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 4.017785900000035,
+      "p5_dev": 0.7424242424242424,
+      "mrr_dev": 0.6107935564660455,
+      "p5_ic": "[0.67, 0.84]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · no dirigido",
+      "Grafo": "completo",
+      "Ponderación": "Tiempo",
+      "p1": 0.40404040404040403,
+      "p3": 0.6161616161616161,
+      "p5": 0.696969696969697,
+      "mrr": 0.5369467142575624,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 4.055610700000216,
+      "p5_dev": 0.6212121212121212,
+      "mrr_dev": 0.458337249987767,
+      "p5_ic": "[0.60, 0.78]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · dirigido inverso (respuesta→estímulo)",
+      "Grafo": "completo",
+      "Ponderación": "Frecuencia",
+      "p1": 0.3939393939393939,
+      "p3": 0.6060606060606061,
+      "p5": 0.7171717171717171,
+      "mrr": 0.53043490177496,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 3.306876099999954,
+      "p5_dev": 0.7424242424242424,
+      "mrr_dev": 0.5680683766808128,
+      "p5_ic": "[0.63, 0.80]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · dirigido inverso (respuesta→estímulo)",
+      "Grafo": "completo",
+      "Ponderación": "Asociación",
+      "p1": 0.3939393939393939,
+      "p3": 0.6060606060606061,
+      "p5": 0.7070707070707071,
+      "mrr": 0.5239944339884139,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 4.103417699999682,
+      "p5_dev": 0.7272727272727273,
+      "mrr_dev": 0.5850201681995758,
+      "p5_ic": "[0.62, 0.79]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · dirigido inverso (respuesta→estímulo)",
+      "Grafo": "completo",
+      "Ponderación": "Tiempo",
+      "p1": 0.35353535353535354,
+      "p3": 0.5454545454545454,
+      "p5": 0.6767676767676768,
+      "mrr": 0.48854056242056676,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 3.099937100000261,
+      "p5_dev": 0.5606060606060606,
+      "mrr_dev": 0.4436753854180848,
+      "p5_ic": "[0.59, 0.77]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · dirigido (estímulo→respuesta)",
+      "Grafo": "completo",
+      "Ponderación": "Frecuencia",
+      "p1": 0.050505050505050504,
+      "p3": 0.09090909090909091,
+      "p5": 0.09090909090909091,
+      "mrr": 0.07428610642209042,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 2.8171682000001965,
+      "p5_dev": 0.10606060606060606,
+      "mrr_dev": 0.09678200179495024,
+      "p5_ic": "[0.04, 0.15]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · dirigido (estímulo→respuesta)",
+      "Grafo": "completo",
+      "Ponderación": "Asociación",
+      "p1": 0.050505050505050504,
+      "p3": 0.09090909090909091,
+      "p5": 0.09090909090909091,
+      "mrr": 0.07427877622608099,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 2.8723242999999457,
+      "p5_dev": 0.10606060606060606,
+      "mrr_dev": 0.09678200179495024,
+      "p5_ic": "[0.04, 0.15]"
+    },
+    {
+      "Familia": "Extensión 1",
+      "Modelo": "PageRank personalizado · dirigido (estímulo→respuesta)",
+      "Grafo": "completo",
+      "Ponderación": "Tiempo",
+      "p1": 0.0,
+      "p3": 0.010101010101010102,
+      "p5": 0.020202020202020204,
+      "mrr": 0.018923565670658338,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 2.8229769999998098,
+      "p5_dev": 0.030303030303030304,
+      "mrr_dev": 0.023577827925829218,
+      "p5_ic": "[0.00, 0.05]"
+    },
+    {
+      "Familia": "Extensión 2",
+      "Modelo": "Fusión RRF · centralidad + node2vec + PageRank",
+      "Grafo": "completo",
+      "Ponderación": "k=30",
+      "p1": 0.6161616161616161,
+      "p3": 0.8080808080808081,
+      "p5": 0.8686868686868687,
+      "mrr": 0.7293510501843835,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 233.24507070000027,
+      "p5_dev": 0.803030303030303,
+      "mrr_dev": 0.6941926162991863,
+      "p5_ic": "[0.80, 0.93]"
+    },
+    {
+      "Familia": "Extensión 2",
+      "Modelo": "Fusión RRF · centralidad + node2vec",
+      "Grafo": "completo",
+      "Ponderación": "k=100",
+      "p1": 0.6060606060606061,
+      "p3": 0.8080808080808081,
+      "p5": 0.8484848484848485,
+      "mrr": 0.7183333333333333,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 228.73648430000003,
+      "p5_dev": 0.7878787878787878,
+      "mrr_dev": 0.6713961733425621,
+      "p5_ic": "[0.78, 0.92]"
+    },
+    {
+      "Familia": "Extensión 2",
+      "Modelo": "Fusión RRF · centralidad + PageRank",
+      "Grafo": "completo",
+      "Ponderación": "k=60",
+      "p1": 0.5959595959595959,
+      "p3": 0.7676767676767676,
+      "p5": 0.8383838383838383,
+      "mrr": 0.7046358243327941,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 12.701408600000377,
+      "p5_dev": 0.7878787878787878,
+      "mrr_dev": 0.6985925648425649,
+      "p5_ic": "[0.77, 0.91]"
+    },
+    {
+      "Familia": "Extensión 2",
+      "Modelo": "Fusión RRF · node2vec + PageRank",
+      "Grafo": "completo",
+      "Ponderación": "k=10",
+      "p1": 0.5656565656565656,
+      "p3": 0.7373737373737373,
+      "p5": 0.797979797979798,
+      "mrr": 0.6737191078984122,
+      "cobertura": 0.98989898989899,
+      "n": 99,
+      "Tiempo (s)": 225.05224850000013,
+      "p5_dev": 0.7727272727272727,
+      "mrr_dev": 0.6645043556472955,
+      "p5_ic": "[0.72, 0.87]"
+    }
+  ],
+  "tabla1_comparacion": {
+    "filas": [
+      {
+        "Modelo": "Intermediación por subconjunto",
+        "Ponderación": "Asociación",
+        "p@1 clase": 0.246,
+        "p@1 nuestro": 0.509090909090909,
+        "p@3 clase": 0.406,
+        "p@3 nuestro": 0.6424242424242425,
+        "p@5 clase": 0.438,
+        "p@5 nuestro": 0.7151515151515152
+      },
+      {
+        "Modelo": "Intermediación por subconjunto",
+        "Ponderación": "Frecuencia",
+        "p@1 clase": 0.178,
+        "p@1 nuestro": 0.3575757575757576,
+        "p@3 clase": 0.312,
+        "p@3 nuestro": 0.5393939393939394,
+        "p@5 clase": 0.377,
+        "p@5 nuestro": 0.6242424242424243
+      },
+      {
+        "Modelo": "Intermediación por subconjunto",
+        "Ponderación": "Tiempo",
+        "p@1 clase": 0.112,
+        "p@1 nuestro": 0.3696969696969697,
+        "p@3 clase": 0.199,
+        "p@3 nuestro": 0.49696969696969695,
+        "p@5 clase": 0.25,
+        "p@5 nuestro": 0.5272727272727272
+      },
+      {
+        "Modelo": "Intermediación, grafo reducido",
+        "Ponderación": "Asociación",
+        "p@1 clase": 0.159,
+        "p@1 nuestro": 0.14545454545454545,
+        "p@3 clase": 0.344,
+        "p@3 nuestro": 0.41818181818181815,
+        "p@5 clase": 0.431,
+        "p@5 nuestro": 0.5454545454545454
+      },
+      {
+        "Modelo": "Cercanía, grafo reducido",
+        "Ponderación": "Asociación",
+        "p@1 clase": 0.221,
+        "p@1 nuestro": 0.17575757575757575,
+        "p@3 clase": 0.428,
+        "p@3 nuestro": 0.36363636363636365,
+        "p@5 clase": 0.518,
+        "p@5 nuestro": 0.4909090909090909
+      },
+      {
+        "Modelo": "Cercanía, grafo reducido",
+        "Ponderación": "Frecuencia",
+        "p@1 clase": 0.196,
+        "p@1 nuestro": 0.16363636363636364,
+        "p@3 clase": 0.355,
+        "p@3 nuestro": 0.2545454545454545,
+        "p@5 clase": 0.514,
+        "p@5 nuestro": 0.3575757575757576
+      },
+      {
+        "Modelo": "Comunicabilidad, grafo reducido",
+        "Ponderación": "Asociación",
+        "p@1 clase": 0.116,
+        "p@1 nuestro": 0.07878787878787878,
+        "p@3 clase": 0.228,
+        "p@3 nuestro": 0.2,
+        "p@5 clase": 0.319,
+        "p@5 nuestro": 0.28484848484848485
+      },
+      {
+        "Modelo": "Grado, grafo reducido",
+        "Ponderación": "Asociación",
+        "p@1 clase": 0.109,
+        "p@1 nuestro": 0.10909090909090909,
+        "p@3 clase": 0.239,
+        "p@3 nuestro": 0.23636363636363636,
+        "p@5 clase": 0.362,
+        "p@5 nuestro": 0.3393939393939394
+      },
+      {
+        "Modelo": "Vector propio, grafo reducido",
+        "Ponderación": "Asociación",
+        "p@1 clase": 0.112,
+        "p@1 nuestro": 0.12727272727272726,
+        "p@3 clase": 0.221,
+        "p@3 nuestro": 0.18181818181818182,
+        "p@5 clase": 0.268,
+        "p@5 nuestro": 0.28484848484848485
+      },
+      {
+        "Modelo": "Katz, grafo reducido",
+        "Ponderación": "Asociación",
+        "p@1 clase": 0.091,
+        "p@1 nuestro": 0.048484848484848485,
+        "p@3 clase": 0.149,
+        "p@3 nuestro": 0.14545454545454545,
+        "p@5 clase": 0.192,
+        "p@5 nuestro": 0.16363636363636364
+      }
+    ],
+    "spearman_p5": 0.5471149893120582
+  },
+  "quien_gana": {
+    "ambos": 45,
+    "solo grafos": 32,
+    "ninguno": 20,
+    "solo node2vec": 2
+  },
+  "quien_gana_rasgos": [
+    {
+      "gana": "ambos",
+      "descripciones": 45,
+      "lemas_utiles": 4.311111111111111,
+      "grado_del_objetivo": 62.0,
+      "idf_medio_lemas": 5.979155250149823
+    },
+    {
+      "gana": "solo grafos",
+      "descripciones": 32,
+      "lemas_utiles": 4.03125,
+      "grado_del_objetivo": 61.0,
+      "idf_medio_lemas": 5.695511243062642
+    },
+    {
+      "gana": "solo node2vec",
+      "descripciones": 2,
+      "lemas_utiles": 4.0,
+      "grado_del_objetivo": 62.5,
+      "idf_medio_lemas": 5.047965251278761
+    },
+    {
+      "gana": "ninguno",
+      "descripciones": 20,
+      "lemas_utiles": 3.4,
+      "grado_del_objetivo": 66.5,
+      "idf_medio_lemas": 6.034692836612419
+    }
+  ],
+  "efecto_limpieza": {
+    "nodo_basura_grado": 4,
+    "filas": [
+      {
+        "Modelo": "Intermediación por subconjunto",
+        "Grafo": "grafo de clase (sin limpiar)",
+        "p@1": 0.5212121212121212,
+        "p@3": 0.6545454545454545,
+        "p@5": 0.7151515151515152,
+        "MRR": 0.603912938912939
+      },
+      {
+        "Modelo": "Intermediación por subconjunto",
+        "Grafo": "grafo limpio (este trabajo)",
+        "p@1": 0.509090909090909,
+        "p@3": 0.6424242424242425,
+        "p@5": 0.7151515151515152,
+        "MRR": 0.5955194805194806
+      },
+      {
+        "Modelo": "Cercanía",
+        "Grafo": "grafo de clase (sin limpiar)",
+        "p@1": 0.1696969696969697,
+        "p@3": 0.3515151515151515,
+        "p@5": 0.47878787878787876,
+        "MRR": 0.32140747264645725
+      },
+      {
+        "Modelo": "Cercanía",
+        "Grafo": "grafo limpio (este trabajo)",
+        "p@1": 0.17575757575757575,
+        "p@3": 0.36363636363636365,
+        "p@5": 0.4909090909090909,
+        "MRR": 0.3232292477248249
+      }
+    ]
+  },
+  "modelo_final": {
+    "clave": [
+      "rrf|centralidad + PageRank",
+      "k=60"
+    ],
+    "nombre": "Fusión RRF · centralidad + PageRank",
+    "prueba": {
+      "p1": 0.5959595959595959,
+      "p3": 0.7676767676767676,
+      "p5": 0.8383838383838383,
+      "mrr": 0.7046358243327941,
+      "cobertura": 0.98989898989899,
+      "n": 99
+    },
+    "desarrollo": {
+      "p1": 0.6060606060606061,
+      "p3": 0.7575757575757576,
+      "p5": 0.7878787878787878,
+      "mrr": 0.6985925648425649,
+      "cobertura": 0.9848484848484849,
+      "n": 66
+    }
+  },
+  "errores": {
+    "total": 16,
+    "por_causa": {
+      "Lematización": 7,
+      "Sin información en el grafo": 5,
+      "Descripción genérica o ambigua": 3,
+      "Otra (revisar)": 1
+    }
+  },
+  "casos_error": [
+    {
+      "id": 5,
+      "concepto": "Taco",
+      "definicion": "Lo pides con cebolla, cilantro y limón en el puesto de la esquina.",
+      "lemas_utiles": "cilantro limón puesto esquina",
+      "fuera_del_grafo": "pid cebollo",
+      "top5": "comida, ejote, torta, mercado, tienda",
+      "posicion_objetivo": 6,
+      "grado_objetivo": 68,
+      "grado_medio_top5": 67.2,
+      "causa_sugerida": "Descripción genérica o ambigua",
+      "causa_revisada": ""
+    },
+    {
+      "id": 14,
+      "concepto": "Lámpara",
+      "definicion": "Aparato con pantalla que alumbra cuando no hay sol.",
+      "lemas_utiles": "aparato pantalla sol",
+      "fuera_del_grafo": "alumbra",
+      "top5": "televisión, cámara, computador, mano, foto",
+      "posicion_objetivo": 12,
+      "grado_objetivo": 40,
+      "grado_medio_top5": 61.0,
+      "causa_sugerida": "Lematización",
+      "causa_revisada": ""
+    },
+    {
+      "id": 2,
+      "concepto": "Borrego",
+      "definicion": "Animal peludo y blanco que cuidan los pastores.",
+      "lemas_utiles": "animal peludo blanco cuidar pastor",
+      "fuera_del_grafo": "",
+      "top5": "oso, conejo, ardilla, perro, gato",
+      "posicion_objetivo": 6,
+      "grado_objetivo": 70,
+      "grado_medio_top5": 86.2,
+      "causa_sugerida": "Otra (revisar)",
+      "causa_revisada": ""
+    },
+    {
+      "id": 1,
+      "concepto": "Borrego",
+      "definicion": "Lo esquilan para sacar lana y se parece a la oveja.",
+      "lemas_utiles": "sacar",
+      "fuera_del_grafo": "esquilar lán parecer ovejar",
+      "top5": "pala, calabaza, tierra, cavar, halloween",
+      "posicion_objetivo": ">100",
+      "grado_objetivo": 70,
+      "grado_medio_top5": 42.0,
+      "causa_sugerida": "Sin información en el grafo",
+      "causa_revisada": ""
+    },
+    {
+      "id": 25,
+      "concepto": "Mano",
+      "definicion": "Con esto saludas y escribes.",
+      "lemas_utiles": "",
+      "fuera_del_grafo": "saluda escrib",
+      "top5": "",
+      "posicion_objetivo": ">100",
+      "grado_objetivo": 88,
+      "grado_medio_top5": 0.0,
+      "causa_sugerida": "Sin información en el grafo",
+      "causa_revisada": ""
+    },
+    {
+      "id": 37,
+      "concepto": "Manzana",
+      "definicion": "Fruta que se le da a la maestra y con la que se hace tarta.",
+      "lemas_utiles": "dar hacer tarta",
+      "fuera_del_grafo": "fruta maestrar",
+      "top5": "plastilina, juguete, palo, burbuja, dedo",
+      "posicion_objetivo": ">100",
+      "grado_objetivo": 72,
+      "grado_medio_top5": 64.0,
+      "causa_sugerida": "Lematización",
+      "causa_revisada": ""
+    },
+    {
+      "id": 71,
+      "concepto": "Abrigo",
+      "definicion": "Lo que sacas del clóset en diciembre para no congelarte.",
+      "lemas_utiles": "clóset",
+      "fuera_del_grafo": "saca diciembre congelarte",
+      "top5": "cajón, falda, ropa, guardar, mueble",
+      "posicion_objetivo": ">100",
+      "grado_objetivo": 51,
+      "grado_medio_top5": 48.6,
+      "causa_sugerida": "Sin información en el grafo",
+      "causa_revisada": ""
+    },
+    {
+      "id": 122,
+      "concepto": "Durazno",
+      "definicion": "Fruta de verano con una pelusita y una semilla dura.",
+      "lemas_utiles": "verano duro",
+      "fuera_del_grafo": "fruta pelusita semillo",
+      "top5": "vestir, playero, short, sol, ropa",
+      "posicion_objetivo": ">100",
+      "grado_objetivo": 55,
+      "grado_medio_top5": 63.0,
+      "causa_sugerida": "Sin información en el grafo",
+      "causa_revisada": ""
+    },
+    {
+      "id": 128,
+      "concepto": "Melón",
+      "definicion": "Fruta de cáscara gruesa que se licúa para hacer agua fresca.",
+      "lemas_utiles": "grueso hacer agua fresco",
+      "fuera_del_grafo": "fruta cáscar licúa",
+      "top5": "palo, burbuja, manguera, cubeta, vaso",
+      "posicion_objetivo": 22,
+      "grado_objetivo": 50,
+      "grado_medio_top5": 56.4,
+      "causa_sugerida": "Lematización",
+      "causa_revisada": ""
+    },
+    {
+      "id": 86,
+      "concepto": "Gelatina",
+      "definicion": "Dulce blando que se hace con grenetina y se come con cuchara.",
+      "lemas_utiles": "dulce hacer",
+      "fuera_del_grafo": "blar grenetinar come cuchar",
+      "top5": "palo, paleta, plastilina, burbuja, niño",
+      "posicion_objetivo": 10,
+      "grado_objetivo": 71,
+      "grado_medio_top5": 82.0,
+      "causa_sugerida": "Sin información en el grafo",
+      "causa_revisada": ""
+    },
+    {
+      "id": 41,
+      "concepto": "Camión",
+      "definicion": "Vehículo pesado que lleva cosas de una ciudad a otra.",
+      "lemas_utiles": "vehículo pesado llevar cosa ciudad",
+      "fuera_del_grafo": "",
+      "top5": "canasta, bolsa, autobús, calle, moto",
+      "posicion_objetivo": 9,
+      "grado_objetivo": 98,
+      "grado_medio_top5": 81.6,
+      "causa_sugerida": "Descripción genérica o ambigua",
+      "causa_revisada": ""
+    },
+    {
+      "id": 85,
+      "concepto": "Gelatina",
+      "definicion": "Postre frío y suave con sabor a fruta que se cuaja en un molde.",
+      "lemas_utiles": "frío suave sabor molde",
+      "fuera_del_grafo": "postrar fruta cuaja",
+      "top5": "plastilina, dulce, paleta, abrigo, guante",
+      "posicion_objetivo": 8,
+      "grado_objetivo": 71,
+      "grado_medio_top5": 69.2,
+      "causa_sugerida": "Lematización",
+      "causa_revisada": ""
+    },
+    {
+      "id": 124,
+      "concepto": "Pantalón",
+      "definicion": "Ropa con bolsas y botón que se usa para trabajar o ir a la escuela.",
+      "lemas_utiles": "ropa bolsa botón usar trabajar ir escuela",
+      "fuera_del_grafo": "",
+      "top5": "camisa, zapato, lavadora, vestir, plancha",
+      "posicion_objetivo": 8,
+      "grado_objetivo": 61,
+      "grado_medio_top5": 65.6,
+      "causa_sugerida": "Descripción genérica o ambigua",
+      "causa_revisada": ""
+    },
+    {
+      "id": 92,
+      "concepto": "Rana",
+      "definicion": "Animal pequeño que vive cerca del agua y atrapa moscas con la lengua.",
+      "lemas_utiles": "animal pequeño vivir cerca agua mosca lengua",
+      "fuera_del_grafo": "atrapa",
+      "top5": "reja, casa, abeja, araña, pollito",
+      "posicion_objetivo": 7,
+      "grado_objetivo": 44,
+      "grado_medio_top5": 69.8,
+      "causa_sugerida": "Lematización",
+      "causa_revisada": ""
+    },
+    {
+      "id": 99,
+      "concepto": "Fresa",
+      "definicion": "Fruta pequeña, roja y con semillitas por fuera.",
+      "lemas_utiles": "pequeño rojo",
+      "fuera_del_grafo": "fruta semillita",
+      "top5": "labio, bebé, botón, niño, manzana",
+      "posicion_objetivo": 7,
+      "grado_objetivo": 68,
+      "grado_medio_top5": 86.6,
+      "causa_sugerida": "Lematización",
+      "causa_revisada": ""
+    }
+  ],
+  "pregunta1": {
+    "reciprocidad": 0.051173031660466176,
+    "tabla": [
+      {
+        "Grafo": "no dirigido",
+        "p1": 0.46464646464646464,
+        "p3": 0.6868686868686869,
+        "p5": 0.7575757575757576,
+        "mrr": 0.5912770262340273
+      },
+      {
+        "Grafo": "dirigido (estímulo→respuesta)",
+        "p1": 0.050505050505050504,
+        "p3": 0.09090909090909091,
+        "p5": 0.09090909090909091,
+        "mrr": 0.07428610642209042
+      },
+      {
+        "Grafo": "dirigido inverso (respuesta→estímulo)",
+        "p1": 0.3939393939393939,
+        "p3": 0.6060606060606061,
+        "p5": 0.7171717171717171,
+        "mrr": 0.53043490177496
+      }
+    ],
+    "nodos_con_salida": 232,
+    "nodos": 4222,
+    "p5_no_dirigido": 0.7575757575757576,
+    "p5_dirigido": 0.09090909090909091,
+    "p5_dirigido_inverso": 0.7171717171717171,
+    "mejor": "no dirigido"
+  },
+  "pregunta2": {
+    "p1_bet": 0.494949494949495,
+    "p5_bet": 0.7171717171717171,
+    "p1_cercania": 0.15151515151515152,
+    "p5_cercania": 0.47474747474747475,
+    "se_reproduce": false,
+    "p1_cercania_subconjunto": 0.5151515151515151,
+    "p5_cercania_subconjunto": 0.7777777777777778,
+    "grado_top5_cercania": 74.34927234927235,
+    "grado_medio": 6.079583135954524
+  },
+  "pregunta3": {
+    "promedio_p5": {
+      "Asociación": 0.5353535353535354,
+      "Frecuencia": 0.4242424242424242,
+      "Tiempo": 0.3656565656565657
+    },
+    "ablacion": [
+      {
+        "Intermediación por subconjunto con peso…": "distancia 100 − FA (correcto)",
+        "p@1": 0.509090909090909,
+        "p@3": 0.6424242424242425,
+        "p@5": 0.7151515151515152,
+        "MRR": 0.5955194805194806
+      },
+      {
+        "Intermediación por subconjunto con peso…": "similitud FA usada como costo (incorrecto)",
+        "p@1": 0.21818181818181817,
+        "p@3": 0.3515151515151515,
+        "p@5": 0.36363636363636365,
+        "MRR": 0.2873447259810896
+      },
+      {
+        "Intermediación por subconjunto con peso…": "distancia 1/f (correcto)",
+        "p@1": 0.3575757575757576,
+        "p@3": 0.5393939393939394,
+        "p@5": 0.6242424242424243,
+        "MRR": 0.4700832711059984
+      },
+      {
+        "Intermediación por subconjunto con peso…": "similitud f usada como costo (incorrecto)",
+        "p@1": 0.21818181818181817,
+        "p@3": 0.3515151515151515,
+        "p@5": 0.3878787878787879,
+        "MRR": 0.29732036181079247
+      }
+    ],
+    "tabla": [
+      {
+        "index": "Intermediación por subconjunto",
+        "Asociación": 0.7171717171717171,
+        "Frecuencia": 0.6363636363636364,
+        "Tiempo": 0.5959595959595959
+      },
+      {
+        "index": "Intermediación",
+        "Asociación": 0.47474747474747475,
+        "Frecuencia": 0.35353535353535354,
+        "Tiempo": 0.35353535353535354
+      },
+      {
+        "index": "Cercanía al subconjunto (propia)",
+        "Asociación": 0.7777777777777778,
+        "Frecuencia": 0.5353535353535354,
+        "Tiempo": 0.5050505050505051
+      },
+      {
+        "index": "Cercanía",
+        "Asociación": 0.47474747474747475,
+        "Frecuencia": 0.3434343434343434,
+        "Tiempo": 0.18181818181818182
+      },
+      {
+        "index": "Vector propio",
+        "Asociación": 0.23232323232323232,
+        "Frecuencia": 0.25252525252525254,
+        "Tiempo": 0.1919191919191919
+      },
+      {
+        "index": "**Promedio**",
+        "Asociación": 0.5353535353535354,
+        "Frecuencia": 0.4242424242424242,
+        "Tiempo": 0.3656565656565657
+      }
+    ],
+    "p5_correcto": 0.7151515151515152,
+    "p5_incorrecto": 0.36363636363636365,
+    "p1_correcto": 0.509090909090909,
+    "p1_incorrecto": 0.21818181818181817
+  },
+  "pregunta4": {
+    "apreciable": false,
+    "deltas": [
+      "Cercanía: Δp@5 = +0.012, ΔMRR = +0.002",
+      "Intermediación por subconjunto: Δp@5 = +0.000, ΔMRR = -0.008"
+    ],
+    "oov": 0.2730263157894737
+  },
+  "pregunta5": {
+    "ambos": 45,
+    "solo_grafos": 32,
+    "solo_node2vec": 2,
+    "ninguno": 20,
+    "distintas": false
+  }
+}
